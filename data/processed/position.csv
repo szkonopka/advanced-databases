@@ -1,6 +1,6 @@
-name
-CFO
-CEO
-Roaster
-Store Manager
-Coffee Wrangler
+id,name
+1,CFO
+2,CEO
+3,Roaster
+4,Store Manager
+5,Coffee Wrangler

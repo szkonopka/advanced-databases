@@ -1,5 +1,9 @@
 import pandas as pd
 
+currentSalesTargetId = 1
+currentDatesId = 1
+salesRecieptsId = 1
+
 def file_need_to_be_created(filename):
     try:
         f = open(filename)
@@ -15,6 +19,7 @@ class Entity:
 class Customer(Entity):
     def __init__(
             self,
+            id,
             firstName,
             email,
             since,
@@ -23,6 +28,7 @@ class Customer(Entity):
             homeStore,
             birthYear
         ):
+        self.id = id,
         self.firstName = firstName
         self.email = email
         self.since = since
@@ -43,12 +49,14 @@ class Generation(Entity):
 class Staff(Entity):
     def __init__(
             self,
+            id,
             firstName,
             lastName,
             startDate,
             location,
             position
         ):
+        self.id = id,
         self.firstName = firstName
         self.lastName = lastName
         self.startDate = startDate
@@ -58,34 +66,43 @@ class Staff(Entity):
 class Position(Entity):
     def __init__(
             self,
+            id,
             name
         ):
+        self.id = id
         self.name = name
 
 class ProductGroup(Entity):
     def __init__(
             self,
+            id,
             group
         ):
+        self.id = id
         self.group = group
 
 class ProductCategory(Entity):
     def __init__(
             self,
+            id,
             category
         ):
+        self.id = id
         self.category = category
 
 class ProductType(Entity):
     def __init__(
             self,
+            id,
             type
         ):
+        self.id = id
         self.type = type
 
 class Product(Entity):
     def __init__(
             self,
+            id,
             description,
             currentWholesalePrice,
             currentRetailPrice,
@@ -97,6 +114,7 @@ class Product(Entity):
             productCategory,
             productType
         ):
+        self.id = id,
         self.description = description
         self.currentWholesalePrice = currentWholesalePrice
         self.currentRetailPrice = currentRetailPrice
@@ -140,6 +158,8 @@ class Dates(Entity):
             quarterName,
             yearId
         ):
+        global currentDatesId
+        self.id = currentDatesId
         self.transactionDate = transactionDate
         self.dateId = dateId
         self.weekId = weekId
@@ -149,6 +169,7 @@ class Dates(Entity):
         self.quarterId = quarterId
         self.quarterName = quarterName
         self.yearId = yearId
+        currentDatesId = currentDatesId + 1
 
 class SalesReciepts(Entity):
     def __init__(
@@ -168,6 +189,8 @@ class SalesReciepts(Entity):
             customer,
             product
         ):
+        global salesRecieptsId
+        self.id = salesRecieptsId
         self.transactionId = transactionId
         self.transactionTime = transactionTime
         self.inStore = inStore
@@ -182,10 +205,12 @@ class SalesReciepts(Entity):
         self.staff = staff
         self.customer = customer
         self.product = product
+        salesRecieptsId = salesRecieptsId + 1
 
 class SalesOutlet(Entity):
     def __init__(
             self,
+            id,
             storeSquareFeet,
             storeAddress,
             storeCity,
@@ -198,6 +223,7 @@ class SalesOutlet(Entity):
             salesOutletType,
             manager
         ):
+        self.id = id,
         self.storeSquareFeet = storeSquareFeet
         self.storeAddress = storeAddress
         self.storeCity = storeCity
@@ -213,8 +239,10 @@ class SalesOutlet(Entity):
 class SalesOutletType(Entity):
     def __init__(
             self,
+            id,
             type
         ):
+        self.id = id
         self.type = type
 
 class SalesTarget(Entity):
@@ -228,6 +256,8 @@ class SalesTarget(Entity):
             totalGoal,
             salesOutlet
         ):
+        global currentSalesTargetId
+        self.id = currentSalesTargetId
         self.yearMonthDate = yearMonthDate
         self.beansGoal = beansGoal
         self.beverageGoal = beverageGoal
@@ -235,3 +265,4 @@ class SalesTarget(Entity):
         self.merchandiseGoal = merchandiseGoal
         self.totalGoal = totalGoal
         self.salesOutlet = salesOutlet
+        currentSalesTargetId = currentSalesTargetId + 1

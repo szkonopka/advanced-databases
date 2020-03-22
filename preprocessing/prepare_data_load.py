@@ -6,7 +6,6 @@ data_processed_path = '../data/processed/'
 
 csvs = [
     '201904_sales_reciepts',
-    
     'dates', 
     'generations',
     'pastry_inventory',
@@ -41,6 +40,8 @@ source_to_table = {
     'position': 'staff',
 } 
 
+storage = {}
+
 df = pd.read_csv(data_base_path + 'generations.csv')
 
 df.apply(lambda row: ents.Generation(
@@ -50,16 +51,26 @@ df.apply(lambda row: ents.Generation(
 
 df = pd.read_csv(data_base_path + 'product.csv')
 
-for elem in df['product_category'].unique():
-    ents.ProductCategory(elem).save_to_csv(data_processed_path + 'productCategory.csv')
+storage['productCategory'] = {}
+for index, elem in enumerate(df['product_category'].unique(), start=1):
+    pc = ents.ProductCategory(index, elem)
+    storage['productCategory'][elem] = pc
+    pc.save_to_csv(data_processed_path + 'productCategory.csv')
 
-for elem in df['product_group'].unique():
-    ents.ProductCategory(elem).save_to_csv(data_processed_path + 'productType.csv')
+storage['productGroup'] = {}
+for index, elem in enumerate(df['product_group'].unique(), start=1):
+    pg = ents.ProductGroup(index, elem)
+    storage['productGroup'][elem] = pg
+    pg.save_to_csv(data_processed_path + 'productGroup.csv')
 
-for elem in df['product_type'].unique():
-    ents.ProductCategory(elem).save_to_csv(data_processed_path + 'productGroup.csv')
+storage['productType'] = {}
+for index, elem in enumerate(df['product_type'].unique(), start=1):
+    pt = ents.ProductType(index, elem)
+    storage['productType'][elem] = pt
+    pt.save_to_csv(data_processed_path + 'productType.csv')
 
 df.apply(lambda row: ents.Product(
+    row['product_id'],
     row['product_description'],
     row['current_wholesale_price'],
     row['current_retail_price'],
@@ -67,30 +78,38 @@ df.apply(lambda row: ents.Product(
     1 if row['promo_yn'] == 'Y' else 0,
     1 if row['new_product_yn'] == 'Y' else 0,
     row['unit_of_measure'],
-    0,
-    0,
-    0)
+    storage['productGroup'][row['product_group']].id,
+    storage['productCategory'][row['product_category']].id,
+    storage['productType'][row['product_type']].id)
     .save_to_csv(data_processed_path + 'product.csv'), axis = 1)
 
 df = pd.read_csv(data_base_path + 'staff.csv')
 
-for elem in df['position'].unique():
-    ents.Position(elem).save_to_csv(data_processed_path + 'position.csv')
+storage['position'] = {}
+for index, elem in enumerate(df['position'].unique(), start=1):
+    p = ents.Position(index, elem)
+    storage['position'][elem] = p
+    p.save_to_csv(data_processed_path + 'position.csv')
 
 df.apply(lambda row: ents.Staff(
+    row['staff_id'],
     row['first_name'],
     row['last_name'],
     row['start_date'],
     row['location'],
-    0)
+    storage['position'][row['position']].id)
     .save_to_csv(data_processed_path + 'staff.csv'), axis = 1)
 
 df = pd.read_csv(data_base_path + 'sales_outlet.csv')
 
-for elem in df['sales_outlet_type']:
-    ents.SalesOutletType(elem).save_to_csv(data_processed_path + 'salesOutletType.csv')
+storage['salesOutletType'] = {}
+for index, elem in enumerate(df['sales_outlet_type'].unique(), start=1):
+    sot = ents.SalesOutletType(index, elem)
+    storage['salesOutletType'][elem] = sot
+    sot.save_to_csv(data_processed_path + 'salesOutletType.csv')
 
 df.apply(lambda row: ents.SalesOutlet(
+    row['sales_outlet_id'],
     row['store_square_feet'],
     row['store_address'],
     row['store_city'],
@@ -100,9 +119,8 @@ df.apply(lambda row: ents.SalesOutlet(
     row['store_longitude'],
     row['store_latitude'],
     row['Neighorhood'],
-    0,
-    0
-    )
+    storage['salesOutletType'][row['sales_outlet_type']].id,
+    row['manager'])
     .save_to_csv(data_processed_path + 'salesOutlet.csv'), axis = 1)
 
 df = pd.read_csv(data_base_path + 'sales_targets.csv')
@@ -114,8 +132,9 @@ df.apply(lambda row: ents.SalesTarget(
     row['food_goal'],
     row['merchandise_goal'],
     row['total_goal'],
-    0)
+    row['sales_outlet_id'])
     .save_to_csv(data_processed_path + 'salesTarget.csv'), axis = 1)
+
 
 df = pd.read_csv(data_base_path + 'dates.csv')
 
@@ -139,8 +158,8 @@ df.apply(lambda row: ents.PastryInventory(
     row['quantity_sold'],
     row['waste'],
     row['% waste'],
-    0,
-    0)
+    row['sales_outlet_id'],
+    row['product_id'])
     .save_to_csv(data_processed_path + 'pastryInventory.csv'), axis = 1)
 
 df = pd.read_csv(data_base_path + '201904_sales_reciepts.csv')
@@ -155,9 +174,9 @@ df.apply(lambda row: ents.SalesReciepts(
     row['line_item_amount'],
     row['unit_price'],
     1 if row['promo_item_yn'] == 'Y' else 0,
-    0,
-    0,
-    0,
-    0,
-    0)
+    row['transaction_date'],
+    row['sales_outlet_id'],
+    row['staff_id'],
+    row['customer_id'],
+    row['product_id'])
     .save_to_csv(data_processed_path + 'salesReciepts.csv'), axis = 1)
