@@ -192,6 +192,6 @@ df.apply(lambda row: ents.SalesReciepts(
     row['transaction_date'],
     row['sales_outlet_id'],
     row['staff_id'],
-    row['customer_id'],
+    '' if row['customer_id'] in [0, 5000, 8000] else row['customer_id'],
     row['product_id'])
     .save_to_csv(data_processed_path + 'salesReciepts.csv'), axis = 1)
