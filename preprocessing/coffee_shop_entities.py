@@ -1,7 +1,6 @@
 import pandas as pd
 
 currentSalesTargetId = 1
-currentDatesId = 1
 salesRecieptsId = 1
 
 def file_need_to_be_created(filename):
@@ -14,7 +13,13 @@ def file_need_to_be_created(filename):
 class Entity:
     def save_to_csv(self, filename):
         df = pd.DataFrame(self.__dict__, columns = list(self.__dict__.keys()), index=[0])
-        df.to_csv(filename, index=False, mode='a', header=file_need_to_be_created(filename))
+        df.to_csv(
+            filename, 
+            index=False, 
+            sep=';',
+            mode='a', 
+            header=file_need_to_be_created(filename)
+        )
 
 class Customer(Entity):
     def __init__(
@@ -25,6 +30,7 @@ class Customer(Entity):
             since,
             loyaltyCardNumber,
             birthdate,
+            gender,
             homeStore,
             birthYear
         ):
@@ -34,6 +40,7 @@ class Customer(Entity):
         self.since = since
         self.loyaltyCardNumber = loyaltyCardNumber
         self.birthdate = birthdate
+        self.gender = gender
         self.homeStore = homeStore
         self.birthYear = birthYear
 
@@ -158,8 +165,6 @@ class Dates(Entity):
             quarterName,
             yearId
         ):
-        global currentDatesId
-        self.id = currentDatesId
         self.transactionDate = transactionDate
         self.dateId = dateId
         self.weekId = weekId
@@ -169,7 +174,6 @@ class Dates(Entity):
         self.quarterId = quarterId
         self.quarterName = quarterName
         self.yearId = yearId
-        currentDatesId = currentDatesId + 1
 
 class SalesReciepts(Entity):
     def __init__(
@@ -217,20 +221,20 @@ class SalesOutlet(Entity):
             storeProvince,
             storeTelephone,
             storePostalCode,
-            storeLangitude,
+            storeLongitude,
             storeLatitude,
             neighborhood,
             salesOutletType,
             manager
         ):
-        self.id = id,
+        self.id = id
         self.storeSquareFeet = storeSquareFeet
         self.storeAddress = storeAddress
         self.storeCity = storeCity
         self.storeProvince = storeProvince
         self.storeTelephone = storeTelephone
         self.storePostalCode = storePostalCode
-        self.storeLangitude = storeLangitude
+        self.storeLongitude = storeLongitude
         self.storeLatitude = storeLatitude
         self.neighborhood = neighborhood
         self.salesOutletType = salesOutletType
