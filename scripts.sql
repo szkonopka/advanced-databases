@@ -1,5 +1,30 @@
 -- ZESTAW SZYMON KONOPKA
 
+-- QUERY 1
+select so.ID as salesOutletId, round(avg(sr.LINEITEMAMOUNT),2) as avgLineItemAmount  from SALESOUTLET so
+    join SALESRECIEPTS sr on so.ID = sr.SALESOUTLET
+    where so.ID = :firstSalesOutletId
+    group by so.ID
+union
+select so.ID as salesOutletId, round(avg(sr.LINEITEMAMOUNT),2) as avgLineItemAmount  from SALESOUTLET so
+    join SALESRECIEPTS sr on so.ID = sr.SALESOUTLET
+    where so.ID = :sectSalesOutletId
+    group by so.ID;
+
+-- QUERY 2
+select sr.* from SALESRECIEPTS sr
+    join DATES d on sr.TRANSACTIONDATE = d.TRANSACTIONDATE
+    join SALESOUTLET so on sr.SALESOUTLET = so.ID
+    join PRODUCT p on sr.PRODUCT = p.ID
+    where d.WEEKID = :weekId and so.ID = :salesOutletId and p.PROMO = 1;
+
+-- QUERY 3
+select * from SALESRECIEPTS sr
+    join CUSTOMER cu on sr.CUSTOMER = cu.ID
+    join GENERATION g on cu.BIRTHYEAR = g.BIRTHYEAR
+    join SALESOUTLET so on sr.SALESOUTLET = so.ID
+    where g.GENERATIONNAME = :generationName and so.ID = :salesOutletId;
+
 -- ZESTAW GRZEGORZ STALA
 
 -- QUERY 1
