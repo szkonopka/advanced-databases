@@ -115,6 +115,16 @@ select st.ID from staff st
     order by count(*) DESC) where ROWNUM <= :limit
               );
 
+-- COMMAND 2
+
+update PRODUCT set CURRENTRETAILPRICE = CURRENTRETAILPRICE + CURRENTRETAILPRICE * :updatePricePct 
+    where ID in (select distinct p.id from PRODUCT p
+    join SALESRECIEPTS sr on p.ID = sr.PRODUCT
+    join PRODUCTCATEGORY pc on p.PRODUCTCATEGORY = pc.ID
+    join SALESOUTLET so on sr.SALESOUTLET = so.ID
+    join PASTRYINVENTORY pi on p.ID = pi.PRODUCT
+    where pc.CATEGORY = :productCategory and so.ID = :salesOutletId and WASTEPERCENTAGE < :wastePct);
+
 -- ZESTAW JAKUB STEPANIAK
 -- QUERY 1
 SELECT best.GENERATIONNAME, best.ID Best, worst.ID worst
