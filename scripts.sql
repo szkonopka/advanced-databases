@@ -19,11 +19,20 @@ select sr.* from SALESRECIEPTS sr
     where d.WEEKID = :weekId and so.ID = :salesOutletId and p.PROMO = 1;
 
 -- QUERY 3
-select * from SALESRECIEPTS sr
+select sr.* from SALESRECIEPTS sr
     join CUSTOMER cu on sr.CUSTOMER = cu.ID
     join GENERATION g on cu.BIRTHYEAR = g.BIRTHYEAR
     join SALESOUTLET so on sr.SALESOUTLET = so.ID
     where g.GENERATIONNAME = :generationName and so.ID = :salesOutletId;
+
+
+-- QUERY 4
+select st.YEARMONTHDATE, so.ID as salesOutletId, st.TOTALGOAL, COUNT(*) as sales, ROUND(COUNT(*) * 100 / st.TOTALGOAL,2) as percOfTotalGoal,
+       SUM(sr.LINEITEMAMOUNT) as sumLineItemAmount from SALESTARGET st
+    join SALESOUTLET so on st.SALESOUTLET = so.ID
+    join SALESRECIEPTS sr on so.ID = sr.SALESOUTLET and sr.TRANSACTIONDATE = st.YEARMONTHDATE
+    where so.ID = :salesOutletId
+    group by st.YEARMONTHDATE, st.TOTALGOAL, so.ID;
 
 -- ZESTAW GRZEGORZ STALA
 
