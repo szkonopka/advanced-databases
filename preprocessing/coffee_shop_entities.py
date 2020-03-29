@@ -11,14 +11,14 @@ def file_need_to_be_created(filename):
         return True
 
 class Entity:
-    def save_to_csv(self, filename):
+    def save_to_csv(self, filename, save_headers=False):
         df = pd.DataFrame(self.__dict__, columns = list(self.__dict__.keys()), index=[0])
         df.to_csv(
             filename, 
             index=False, 
             sep=';',
             mode='a', 
-            header=file_need_to_be_created(filename)
+            header=save_headers and file_need_to_be_created(filename)
         )
 
 class Customer(Entity):

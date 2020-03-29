@@ -34,13 +34,6 @@ tables = [
     'salesOutletType'
 ]
 
-source_to_table = {
-    'customer' : 'customer',
-    'customer' : 'generation',
-    'staff' : 'staff',
-    'position': 'staff',
-} 
-
 storage = {}
 
 df = pd.read_csv(data_base_path + 'generations.csv')
@@ -73,8 +66,8 @@ for index, elem in enumerate(df['product_type'].unique(), start=1):
 df.apply(lambda row: ents.Product(
     row['product_id'],
     row['product_description'],
-    str(row['current_wholesale_price']).replace('.', ',').replace('$', '').replace(' ', ''),
-    str(row['current_retail_price']).replace('.', ',').replace('$', '').replace(' ', ''),
+    str(row['current_wholesale_price']).replace('$', '').replace(' ', ''),
+    str(row['current_retail_price']).replace('$', '').replace(' ', ''),
     1 if row['tax_exempt_yn'] == 'Y' else 0,
     1 if row['promo_yn'] == 'Y' else 0,
     1 if row['new_product_yn'] == 'Y' else 0,
@@ -117,8 +110,8 @@ df.apply(lambda row: ents.SalesOutlet(
     row['store_state_province'],
     row['store_telephone'].replace('-', ''),
     row['store_postal_code'],
-    str(row['store_longitude']).replace('.', ','),
-    str(row['store_latitude']).replace('.', ','),
+    str(row['store_longitude']),
+    str(row['store_latitude']),
     row['Neighorhood'],
     storage['salesOutletType'][row['sales_outlet_type']].id,
     int(row['manager']) if not math.isnan(row['manager']) else '')
@@ -186,8 +179,8 @@ df.apply(lambda row: ents.SalesReciepts(
     row['order'],
     row['line_item_id'],
     row['quantity'],
-    str(row['line_item_amount']).replace('.', ','),
-    str(row['unit_price']).replace('.', ','),
+    str(row['line_item_amount']),
+    str(row['unit_price']),
     1 if row['promo_item_yn'] == 'Y' else 0,
     row['transaction_date'],
     row['sales_outlet_id'],
