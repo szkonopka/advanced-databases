@@ -1,0 +1,373 @@
+
+Session altered.
+
+Elapsed: 00:00:00.00
+'1st QUERY'
+
+Elapsed: 00:00:00.00
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	  1  db block gets
+	890  consistent gets
+	  0  physical reads
+	184  redo size
+	646  bytes sent via SQL*Net to client
+	624  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+'2nd QUERY'
+
+no rows selected
+
+Elapsed: 00:00:00.01
+
+Statistics
+----------------------------------------------------------
+	  6  recursive calls
+	  0  db block gets
+      21222  consistent gets
+	  0  physical reads
+	  0  redo size
+       1458  bytes sent via SQL*Net to client
+	613  bytes received via SQL*Net from client
+	  1  SQL*Net roundtrips to/from client
+	  0  sorts (memory)
+	  0  sorts (disk)
+	  0  rows processed
+
+
+3939 rows selected.
+
+Elapsed: 00:00:00.05
+
+Statistics
+----------------------------------------------------------
+	  3  recursive calls
+	  0  db block gets
+      17803  consistent gets
+	  0  physical reads
+	  0  redo size
+     200361  bytes sent via SQL*Net to client
+       3506  bytes received via SQL*Net from client
+	264  SQL*Net roundtrips to/from client
+	  0  sorts (memory)
+	  0  sorts (disk)
+       3939  rows processed
+
+'3rd QUERY'
+
+2535 rows selected.
+
+Elapsed: 00:00:00.05
+
+Statistics
+----------------------------------------------------------
+	  3  recursive calls
+	  0  db block gets
+      26104  consistent gets
+	  0  physical reads
+	140  redo size
+     130177  bytes sent via SQL*Net to client
+       2472  bytes received via SQL*Net from client
+	170  SQL*Net roundtrips to/from client
+	  0  sorts (memory)
+	  0  sorts (disk)
+       2535  rows processed
+
+'4th QUERY'
+
+no rows selected
+
+Elapsed: 00:00:00.00
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	  0  db block gets
+	450  consistent gets
+	  0  physical reads
+	  0  redo size
+	766  bytes sent via SQL*Net to client
+	613  bytes received via SQL*Net from client
+	  1  SQL*Net roundtrips to/from client
+	  0  sorts (memory)
+	  0  sorts (disk)
+	  0  rows processed
+
+'5th QUERY'
+
+209 rows selected.
+
+Elapsed: 00:00:00.03
+
+Statistics
+----------------------------------------------------------
+	  3  recursive calls
+	  0  db block gets
+      42424  consistent gets
+	  0  physical reads
+	  0  redo size
+       9579  bytes sent via SQL*Net to client
+	767  bytes received via SQL*Net from client
+	 15  SQL*Net roundtrips to/from client
+	  2  sorts (memory)
+	  0  sorts (disk)
+	209  rows processed
+
+'1st COMMAND'
+
+Procedure created.
+
+Elapsed: 00:00:00.00
+begin
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C008901) violated
+ORA-06512: at "COFFEESHOP.SELL_PRODUCT", line 12
+ORA-06512: at line 2
+
+
+Elapsed: 00:00:00.00
+'2nd COMMAND'
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+		    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+		    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+		    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+SP2-0552: Bind variable "CHANGE" not declared.
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+		    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+		    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+		    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+SP2-0552: Bind variable "CHANGE" not declared.
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+		    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+		    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+		    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+SP2-0552: Bind variable "CHANGE" not declared.
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+		    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+		    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+		    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+SP2-0552: Bind variable "CHANGE" not declared.
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+Usage: VAR[IABLE] [ <variable> [ NUMBER | CHAR | CHAR (n [CHAR|BYTE]) |
+		    VARCHAR2 (n [CHAR|BYTE]) | NCHAR | NCHAR (n) |
+		    NVARCHAR2 (n) | CLOB | NCLOB | BLOB | BFILE
+		    REFCURSOR | BINARY_FLOAT | BINARY_DOUBLE ] ]
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+SP2-0552: Bind variable "CHANGE" not declared.
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+
+PL/SQL procedure successfully completed.
+
+Elapsed: 00:00:00.00
+				       ), st.MERCHANDISEGOAL)
+                                       *
+ERROR at line 10:
+ORA-00933: SQL command not properly ended
+
+
+Elapsed: 00:00:00.00
+'3rd COMMAND'
+
+0 rows updated.
+
+Elapsed: 00:00:00.24
+
+Statistics
+----------------------------------------------------------
+	  3  recursive calls
+	  0  db block gets
+      87004  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       2010  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  2  sorts (memory)
+	  0  sorts (disk)
+	  0  rows processed
+
