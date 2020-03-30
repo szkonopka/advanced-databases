@@ -48,3 +48,5 @@ ALTER TABLE customer ADD CONSTRAINT FKcustomer950011 FOREIGN KEY (homeStore) REF
 ALTER TABLE salesReciepts ADD CONSTRAINT FKsalesRecie17486 FOREIGN KEY (product) REFERENCES product (id);
 ALTER TABLE salesReciepts ADD CONSTRAINT FKsalesRecie335741 FOREIGN KEY (transactionDate) REFERENCES dates (transactionDate);
 ALTER TABLE pastryInventory ADD CONSTRAINT FKpastryInve898577 FOREIGN KEY (transactionDate) REFERENCES dates (transactionDate);
+
+EXIT

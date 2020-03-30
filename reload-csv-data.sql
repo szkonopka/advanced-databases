@@ -282,3 +282,5 @@ FROM EXTERNAL (
         customerExt, 
         productExt))     
    LOCATION ('salesReciepts.csv') REJECT LIMIT UNLIMITED) salesReciepts_external;  
+
+EXIT
