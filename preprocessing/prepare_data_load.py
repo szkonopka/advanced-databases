@@ -5,35 +5,6 @@ import math
 data_base_path = '../data/base/'
 data_processed_path = '../data/processed/'
 
-csvs = [
-    '201904_sales_reciepts',
-    'dates', 
-    'generations',
-    'pastry_inventory',
-    'product',
-    'sales_outlet',
-    'sales_targets',
-    'customer',
-    'staff'
-]
-
-tables = [
-    'customer',
-    'generation',
-    'staff',
-    'position',
-    'product',
-    'productGroup',
-    'productCategory',
-    'productType',
-    'pastryInventory',
-    'dates',
-    'salesReciepts',
-    'salesOutlet',
-    'salesTarget',
-    'salesOutletType'
-]
-
 storage = {}
 
 df = pd.read_csv(data_base_path + 'generations.csv')
