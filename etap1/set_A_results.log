@@ -1,0 +1,155 @@
+
+System altered.
+
+
+System altered.
+
+
+Session altered.
+
+'1st QUERY'
+
+Elapsed: 00:00:00.05
+
+Statistics
+----------------------------------------------------------
+	237  recursive calls
+	  1  db block gets
+       1192  consistent gets
+	  0  physical reads
+	140  redo size
+	704  bytes sent via SQL*Net to client
+	623  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	 15  sorts (memory)
+	  0  sorts (disk)
+	  2  rows processed
+
+'2nd QUERY'
+
+no rows selected
+
+Elapsed: 00:00:00.03
+
+Statistics
+----------------------------------------------------------
+	115  recursive calls
+	  0  db block gets
+	640  consistent gets
+	  0  physical reads
+	  0  redo size
+       1314  bytes sent via SQL*Net to client
+	612  bytes received via SQL*Net from client
+	  1  SQL*Net roundtrips to/from client
+	  6  sorts (memory)
+	  0  sorts (disk)
+	  0  rows processed
+
+
+Elapsed: 00:00:00.01
+
+Statistics
+----------------------------------------------------------
+	  8  recursive calls
+	  0  db block gets
+	416  consistent gets
+	  0  physical reads
+	  0  redo size
+       1555  bytes sent via SQL*Net to client
+	623  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	  0  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+'3rd QUERY'
+
+Elapsed: 00:00:00.03
+
+Statistics
+----------------------------------------------------------
+	119  recursive calls
+	  0  db block gets
+	665  consistent gets
+	  0  physical reads
+	  0  redo size
+       1695  bytes sent via SQL*Net to client
+	623  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	 13  sorts (memory)
+	  0  sorts (disk)
+	  3  rows processed
+
+'4th QUERY'
+    group by st.TARGET_DATE, st.TOTALGOAL, so.ID
+                             *
+ERROR at line 5:
+ORA-00904: "ST"."TOTALGOAL": invalid identifier
+
+
+Elapsed: 00:00:00.01
+'5th QUERY'
+
+6 rows selected.
+
+Elapsed: 00:00:00.02
+
+Statistics
+----------------------------------------------------------
+	 22  recursive calls
+	  0  db block gets
+	475  consistent gets
+	  0  physical reads
+	  0  redo size
+	930  bytes sent via SQL*Net to client
+	623  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	  2  sorts (memory)
+	  0  sorts (disk)
+	  6  rows processed
+
+'1st COMMAND'
+
+Procedure created.
+
+Elapsed: 00:00:00.11
+    SELL_PRODUCT(
+    *
+ERROR at line 2:
+ORA-06550: line 2, column 5:
+PLS-00306: wrong number or types of arguments in call to 'SELL_PRODUCT'
+ORA-06550: line 2, column 5:
+PL/SQL: Statement ignored
+
+
+Elapsed: 00:00:00.00
+'2nd COMMAND'
+				       ), st.TOTALGOAL)
+                                          *
+ERROR at line 10:
+ORA-00904: "ST"."TOTALGOAL": invalid identifier
+
+
+Elapsed: 00:00:00.00
+'3rd COMMAND'
+
+0 rows updated.
+
+Elapsed: 00:00:33.60
+
+Statistics
+----------------------------------------------------------
+	 75  recursive calls
+	  0  db block gets
+    2055535  consistent gets
+	  0  physical reads
+	140  redo size
+	866  bytes sent via SQL*Net to client
+       1941  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  3  sorts (memory)
+	  0  sorts (disk)
+	  0  rows processed
+
+timing for: zestaw_transakcji_sk
+Elapsed: 00:00:34.07

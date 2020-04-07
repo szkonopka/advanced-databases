@@ -21,7 +21,7 @@ exec :generationName := 'Baby Boomers'
 exec :outlet_id := 3
 exec :year := 2019
 exec :change := 0.05
-exec :quarter := 'Q2'
+exec :quarter := 2
 exec :perc_discount := 5
 
 set timing on

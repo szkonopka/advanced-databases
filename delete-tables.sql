@@ -1,14 +1,15 @@
-DROP TABLE staff;
-DROP TABLE position;
-DROP TABLE product;
-DROP TABLE productType;
-DROP TABLE productCategory;
-DROP TABLE productGroup;
-DROP TABLE customer;
-DROP TABLE generation;
-DROP TABLE salesOutlet;
-DROP TABLE salesTarget;
-DROP TABLE pastryInventory;
-DROP TABLE salesReciepts;
-DROP TABLE dates;
-DROP TABLE salesOutletType;
+drop table sales_receipt;
+drop table customer;
+drop table pastry_inventory;
+drop table sales_outlet_target;
+drop table sales_outlet;
+drop table sales_outlet_type;
+drop table staff;
+drop table position;
+drop table product;
+drop table product_type;
+drop table product_category;
+drop table product_group;
+drop table generation;
+
+exit
