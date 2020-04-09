@@ -1,3 +1,5 @@
+#!/bin/bash
+
 chmod u+x ../clear-all-tables.sql
 chmod u+x ../reload-csv-data.sql
 
