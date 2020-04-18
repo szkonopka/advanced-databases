@@ -1,0 +1,50 @@
+
+System altered.
+
+Elapsed: 00:00:00.05
+
+System altered.
+
+Elapsed: 00:00:00.09
+
+Session altered.
+
+Elapsed: 00:00:00.00
+'1st QUERY'
+'2nd QUERY'
+		  JOIN PRODUCTCATEGORY PC on PP.PRODUCTCATEGORY = PC.ID
+                       *
+ERROR at line 17:
+ORA-00942: table or view does not exist
+
+
+Elapsed: 00:00:00.04
+'3rd QUERY'
+	 JOIN SALESRECIEPTS SR on SS.ID = SR.STAFF
+              *
+ERROR at line 3:
+ORA-00942: table or view does not exist
+
+
+Elapsed: 00:00:00.02
+'4th QUERY'
+'5th QUERY'
+FROM SALESRECIEPTS SR
+     *
+ERROR at line 8:
+ORA-00942: table or view does not exist
+
+
+Elapsed: 00:00:00.01
+'1st COMMAND'
+
+Warning: Procedure created with compilation errors.
+
+Elapsed: 00:00:00.23
+'2nd COMMAND'
+
+Warning: Procedure created with compilation errors.
+
+Elapsed: 00:00:00.01
+timing for: zestaw_transakcji_gs
+Elapsed: 00:00:00.36

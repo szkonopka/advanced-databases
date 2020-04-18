@@ -27,3 +27,5 @@ ALTER TABLE sales_outlet ADD CONSTRAINT fk_sales_outlet_type_id FOREIGN KEY (sal
 ALTER TABLE sales_outlet ADD CONSTRAINT fk_sales_outlet_manager_staff_id FOREIGN KEY (manager_staff_id) REFERENCES staff (id);
 ALTER TABLE customer ADD CONSTRAINT fk_customer_home_sales_outlet_id FOREIGN KEY (home_sales_outlet_id) REFERENCES sales_outlet (id);
 ALTER TABLE sales_receipt ADD CONSTRAINT fk_sales_receipt_product_id FOREIGN KEY (product_id) REFERENCES product (id);
+
+EXIT;

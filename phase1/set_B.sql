@@ -1,5 +1,7 @@
 -- ZESTAW GRZEGORZ STALA
 
+@measure_params.sql
+
 alter system flush buffer_cache;
 alter system flush shared_pool;
 set autotrace traceonly statistics

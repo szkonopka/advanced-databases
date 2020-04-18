@@ -1,4 +1,14 @@
 -- ZESTAW JAKUB STEPANIAK
+
+@measure_params.sql
+
+alter system flush buffer_cache;
+alter system flush shared_pool;
+set autotrace traceonly statistics
+alter session set NLS_TIMESTAMP_FORMAT = 'HH:MI:SS.FF6';
+timing start zestaw_transakcji_gs
+
+prompt '1st QUERY'
 -- QUERY 1
 SELECT best.GENERATIONNAME, best.ID Best, worst.ID worst
 FROM (
@@ -40,6 +50,7 @@ FROM (
     group by GENERATIONNAME, SS.ID
 ) worst on best.GENERATIONNAME = worst.GENERATIONNAME
 
+prompt '2nd QUERY'
 -- QUERY 2
 SELECT nvl(with_promo.Category, without_promo.Category),
        with_promo.SalesSum    With_Promo,
@@ -62,12 +73,14 @@ FROM (
          GROUP BY PC.CATEGORY
      ) without_promo on with_promo.Category = without_promo.Category;
 
+prompt '3rd QUERY'
 -- QUERY 3
 SELECT SR.*
 FROM STAFF SS
          JOIN SALESRECIEPTS SR on SS.ID = SR.STAFF
 WHERE ss.LASTNAME = 'Octavia';
 
+prompt '4th QUERY'
 -- QUERY 4
 SELECT(
           case
@@ -106,6 +119,7 @@ ORDER BY (
                  end
              )
 
+prompt '5th QUERY'
 -- QUERY 5
 SELECT CASE
            WHEN SR.SALESOUTLET = CC.HOMESTORE THEN 1
@@ -123,6 +137,7 @@ GROUP BY (
                  END
              );
 
+prompt '1st COMMAND'
 -- COMMAND 1
 CREATE OR REPLACE PROCEDURE SetProductNotNew(
     months_threshold IN integer
@@ -139,7 +154,9 @@ BEGIN
 
     commit;
 end;
+/
 
+prompt '2nd COMMAND'
 -- COMMAND 2
 create or replace procedure Add_product(name in varchar2,
                                         group_name in varchar2,
@@ -174,6 +191,7 @@ begin
             (select id from PRODUCTTYPE where TYPE = type_name));
 end;
 
+prompt '3rd COMMAND'
 -- COMMAND 3
 create or replace procedure Delete_Customer(
     customer_id number
@@ -190,4 +208,7 @@ begin
     where cc.ID = customer_id;
     commit;
 end;
-*/
+/
+
+timing stop
+exit rollback

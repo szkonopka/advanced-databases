@@ -1,0 +1,133 @@
+
+System altered.
+
+Elapsed: 00:00:00.06
+
+System altered.
+
+Elapsed: 00:00:00.09
+
+Session altered.
+
+Elapsed: 00:00:00.00
+'1st QUERY'
+
+Elapsed: 00:00:00.07
+
+Statistics
+----------------------------------------------------------
+	371  recursive calls
+	  0  db block gets
+       1100  consistent gets
+	  0  physical reads
+	  0  redo size
+	764  bytes sent via SQL*Net to client
+	624  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	 26  sorts (memory)
+	  0  sorts (disk)
+	  4  rows processed
+
+'2nd QUERY'
+'3rd QUERY'
+
+100 rows selected.
+
+Elapsed: 00:00:00.03
+
+Statistics
+----------------------------------------------------------
+	443  recursive calls
+	  0  db block gets
+	941  consistent gets
+	  0  physical reads
+	  0  redo size
+       5138  bytes sent via SQL*Net to client
+	690  bytes received via SQL*Net from client
+	  8  SQL*Net roundtrips to/from client
+	 51  sorts (memory)
+	  0  sorts (disk)
+	100  rows processed
+
+'4th QUERY'
+
+100 rows selected.
+
+Elapsed: 00:00:00.06
+
+Statistics
+----------------------------------------------------------
+	342  recursive calls
+	  0  db block gets
+       1341  consistent gets
+	  0  physical reads
+	  0  redo size
+       5704  bytes sent via SQL*Net to client
+	690  bytes received via SQL*Net from client
+	  8  SQL*Net roundtrips to/from client
+	 15  sorts (memory)
+	  0  sorts (disk)
+	100  rows processed
+
+'5th QUERY'
+
+50 rows selected.
+
+Elapsed: 00:00:00.02
+
+Statistics
+----------------------------------------------------------
+	107  recursive calls
+	  0  db block gets
+	403  consistent gets
+	  0  physical reads
+	  0  redo size
+       3559  bytes sent via SQL*Net to client
+	657  bytes received via SQL*Net from client
+	  5  SQL*Net roundtrips to/from client
+	  5  sorts (memory)
+	  0  sorts (disk)
+	 50  rows processed
+
+'1st COMMAND'
+
+50 rows updated.
+
+Elapsed: 00:00:00.07
+
+Statistics
+----------------------------------------------------------
+	 90  recursive calls
+	104  db block gets
+	907  consistent gets
+	  0  physical reads
+      22492  redo size
+	867  bytes sent via SQL*Net to client
+       1321  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  4  sorts (memory)
+	  0  sorts (disk)
+	 50  rows processed
+
+'2nd COMMAND'
+
+0 rows updated.
+
+Elapsed: 00:00:00.04
+
+Statistics
+----------------------------------------------------------
+	131  recursive calls
+	  0  db block gets
+	602  consistent gets
+	  0  physical reads
+	  0  redo size
+	869  bytes sent via SQL*Net to client
+       1386  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  3  sorts (memory)
+	  0  sorts (disk)
+	  0  rows processed
+
+timing for: zestaw_transakcji_gs
+Elapsed: 00:00:00.49
