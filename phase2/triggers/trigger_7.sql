@@ -9,8 +9,11 @@ BEGIN
     SELECT AVG(st.total_goal)
     INTO avg_total
     FROM sales_outlet_target st;
-
-    INSERT INTO sales_outlet_target (target_date, total_goal, sales_outlet_id)
-    VALUES (CURRENT_DATE, avg_total, :new.ID);
+    
+    FOR p IN (SELECT * FROM product)
+    LOOP
+        INSERT INTO sales_outlet_target (target_date, product_id, total_goal, sales_outlet_id)
+        VALUES (CURRENT_DATE, p.id, avg_total, :new.ID);
+    END LOOP;
 END;
 /
