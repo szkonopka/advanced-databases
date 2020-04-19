@@ -1,0 +1,49 @@
+
+Trigger created.
+
+
+Trigger created.
+
+ insert into customer (full_name,email,since,loyalty_card_number,birth_date,gender,home_sales_outlet_id,generation_id)
+             *
+ERROR at line 1:
+ORA-00036: maximum number of recursive SQL levels (50) exceeded
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_2'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_2'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_2'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_2'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_2'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_2'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_2'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_1", line 2
+ORA-04088: error during execution of trigger 'COFFEESHOP.EXPERIMENT_1_1'
+ORA-06512: at "COFFEESHOP.EXPERIMENT_1_2", line 2
+
+
+
+Trigger dropped.
+
+
+Trigger dropped.
+
