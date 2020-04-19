@@ -16,7 +16,7 @@ exec_trigger_ut() {
     echo "Trigger $1. UTs executed..."
 }
 
-for i in $(seq 1 9);
+for i in $(seq 1 8);
 do
     exec_trigger_ut $i
 done

@@ -8,7 +8,7 @@ sqlplus.exe -S coffeeshop/pass@localhost @../clear-all-tables.sql
 sqlplus.exe -S coffeeshop/pass@localhost @../reload-csv-data.sql
 
 exec_transaction_set() {
-    sqlplus.exe -S coffeeshop/pass@localhost @set_$1.sql > ./results/set_$1_results.log    
+    sqlplus.exe -S coffeeshop/pass@localhost @sets/set_$1.sql > ./results/set_$1_results.log    
     echo "Set $1 has been executed - results saved in ./results/set_$1_results.log"
 }
 

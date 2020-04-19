@@ -9,8 +9,68 @@ System altered.
 
 PL/SQL procedure successfully completed.
 
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
 
 PL/SQL procedure successfully completed.
 
 timing for: trigger_2
-Elapsed: 00:00:00.13
+Elapsed: 00:00:00.17

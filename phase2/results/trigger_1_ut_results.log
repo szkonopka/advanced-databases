@@ -4,12 +4,317 @@ System altered.
 
 System altered.
 
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	145  recursive calls
+	 37  db block gets
+	315  consistent gets
+	  0  physical reads
+       6136  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	 14  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1198  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1198  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	  4  recursive calls
+	  1  db block gets
+	 64  consistent gets
+	  0  physical reads
+	  0  redo size
+	868  bytes sent via SQL*Net to client
+       1199  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+timing for: trigger_1_prep
+Elapsed: 00:00:00.10
+
+Rollback complete.
+
 '1st rule - unsold_products scheduler job'
 
 PL/SQL procedure successfully completed.
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (COFFEESHOP.SYS_C0031816) violated
+
 
 
 PL/SQL procedure successfully completed.
 
 timing for: trigger_1
-Elapsed: 00:00:00.05
+Elapsed: 00:00:00.08

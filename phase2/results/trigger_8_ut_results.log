@@ -5,14 +5,8 @@ System altered.
 System altered.
 
 '8th rule - employee_promotion scheduler job'
-BEGIN
-*
-ERROR at line 1:
-ORA-27477: "COFFEESHOP"."EMPLOYEE_PROMOTION" already exists
-ORA-06512: at "SYS.DBMS_ISCHED", line 175
-ORA-06512: at "SYS.DBMS_SCHEDULER", line 288
-ORA-06512: at line 2
 
+PL/SQL procedure successfully completed.
 
 timing for: trigger_8
 Elapsed: 00:00:00.00
