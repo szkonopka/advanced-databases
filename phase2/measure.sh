@@ -9,12 +9,12 @@ chmod 777 ./triggers/*
 
 sqlplus.exe -S coffeeshop/pass@localhost @../delete-tables.sql
 sqlplus.exe -S coffeeshop/pass@localhost @../erd-ddl-create-tables.sql
-sqlplus.exe -S coffeeshop/pass@localhost @drop_rules.sql
 sqlplus.exe -S coffeeshop/pass@localhost @../reload-csv-data.sql
 
 exec_trigger_ut() {
     sqlplus.exe -S coffeeshop/pass@localhost @ut/trigger_$1_ut.sql > ./results/trigger_$1_ut_results.log    
     echo "Trigger $1. UTs executed..."
+    sqlplus.exe -S coffeeshop/pass@localhost @drop_rules.sql
 }
 
 for i in $(seq 1 8);

@@ -4,8 +4,8 @@ CREATE OR REPLACE TRIGGER delete_sales_outlet
     ON sales_outlet
     FOR EACH ROW 
 BEGIN
-    DELETE FROM sales_target st 
-    WHERE st.sales_outlet_id = :old.id;
+    DELETE FROM sales_outlet_target sot 
+    WHERE sot.sales_outlet_id = :old.id;
 
     DELETE FROM pastry_inventory pi
     WHERE pi.sales_outlet_id = :old.id;
@@ -15,7 +15,7 @@ BEGIN
     WHERE sr.sales_outlet_id = :old.id;
 
     UPDATE staff s
-    SET s.location = NULL
+    SET s.sales_outlet_id = NULL
     WHERE s.sales_outlet_id = :old.id;
 END;
 /

@@ -1,3 +1,6 @@
+set termout off
+set autotrace off
+
 -- DELETE TRIGGERS - RULES: 3, 4, 6, 7
 DROP TRIGGER sold_products;
 DROP TRIGGER check_stack_before_transaction;
@@ -16,7 +19,7 @@ END;
 /
 
 BEGIN
-    DBMS_SCHEDULER.DROP_JOB('5_percent_promo');
+    DBMS_SCHEDULER.DROP_JOB('percent_promo');
 END;
 /
 
@@ -29,5 +32,8 @@ BEGIN
     DBMS_SCHEDULER.DROP_JOB('goals_update');
 END;
 /
+
+set termout on
+set autotrace traceonly statistics
 
 EXIT;

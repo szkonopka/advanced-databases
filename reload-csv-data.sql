@@ -1,4 +1,4 @@
-CREATE OR REPLACE DIRECTORY ext_tab_dir as 'E:\advanced-databases\data\new_dataset';
+CREATE OR REPLACE DIRECTORY ext_tab_dir as 'D:\projects\advanced-databases\data\new_dataset';
 
 INSERT INTO generation (name)
 SELECT name_ext

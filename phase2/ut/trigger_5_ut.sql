@@ -8,7 +8,7 @@ set autotrace traceonly statistics
 timing start trigger_5
 
 begin
-    dbms_scheduler.run_job(job_name => '5_percent_promo');
+    dbms_scheduler.run_job(job_name => 'percent_promo');
 end;
 /
 

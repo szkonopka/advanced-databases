@@ -1,5 +1,4 @@
 PROMPT '2nd rule - sales_statement scheduler job'
-PROMPT '2nd rule - sales_statement scheduler job'
 BEGIN
     DBMS_SCHEDULER.CREATE_JOB (
         JOB_NAME        => 'sales_statement',

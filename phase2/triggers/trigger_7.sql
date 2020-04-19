@@ -6,7 +6,7 @@ CREATE OR REPLACE TRIGGER sales_goals_for_new_sales_outlet
 DECLARE
     avg_total       number(10, 2);
 BEGIN
-    SELECT AVG(st.TOTALGOAL)
+    SELECT AVG(st.total_goal)
     INTO avg_total
     FROM sales_outlet_target st;
 
