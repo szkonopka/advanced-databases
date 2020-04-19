@@ -4,22 +4,18 @@ System altered.
 
 System altered.
 
-'2nd rule - sales_statement scheduler job'
-
-PL/SQL procedure successfully completed.
-
 
 1 row created.
 
 
 Statistics
 ----------------------------------------------------------
-	395  recursive calls
+	377  recursive calls
 	 18  db block gets
-	634  consistent gets
+	615  consistent gets
 	  0  physical reads
 	612  redo size
-	865  bytes sent via SQL*Net to client
+	864  bytes sent via SQL*Net to client
        1176  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	 24  sorts (memory)
@@ -37,7 +33,7 @@ Statistics
 	  2  consistent gets
 	  0  physical reads
 	  0  redo size
-	868  bytes sent via SQL*Net to client
+	864  bytes sent via SQL*Net to client
        1176  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  1  sorts (memory)
@@ -55,7 +51,7 @@ Statistics
 	  2  consistent gets
 	  0  physical reads
 	  0  redo size
-	869  bytes sent via SQL*Net to client
+	866  bytes sent via SQL*Net to client
        1176  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  1  sorts (memory)
@@ -69,8 +65,146 @@ Statistics
 Statistics
 ----------------------------------------------------------
 	  2  recursive calls
+	 12  db block gets
+	  2  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	 12  db block gets
+	  2  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	 12  db block gets
+	  2  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	 12  db block gets
+	  2  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	 12  db block gets
+	  2  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       1175  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	 12  db block gets
+	  2  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       1175  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  2  recursive calls
+	 12  db block gets
+	  2  consistent gets
+	  0  physical reads
+	  0  redo size
+	867  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+PL/SQL procedure successfully completed.
+
+timing for: trigger_2_prep
+Elapsed: 00:00:00.21
+
+Rollback complete.
+
+'2nd rule - sales_statement scheduler job'
+
+PL/SQL procedure successfully completed.
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  0  recursive calls
 	 14  db block gets
-	  2  consistent gets
+	  0  consistent gets
 	  0  physical reads
 	  0  redo size
 	869  bytes sent via SQL*Net to client
@@ -86,9 +220,9 @@ Statistics
 
 Statistics
 ----------------------------------------------------------
-	  2  recursive calls
+	  0  recursive calls
 	 12  db block gets
-	  2  consistent gets
+	  0  consistent gets
 	  0  physical reads
 	  0  redo size
 	869  bytes sent via SQL*Net to client
@@ -104,9 +238,9 @@ Statistics
 
 Statistics
 ----------------------------------------------------------
-	  2  recursive calls
+	  0  recursive calls
 	 12  db block gets
-	  2  consistent gets
+	  0  consistent gets
 	  0  physical reads
 	  0  redo size
 	869  bytes sent via SQL*Net to client
@@ -122,9 +256,9 @@ Statistics
 
 Statistics
 ----------------------------------------------------------
-	  2  recursive calls
+	  0  recursive calls
 	 12  db block gets
-	  2  consistent gets
+	  0  consistent gets
 	  0  physical reads
 	  0  redo size
 	869  bytes sent via SQL*Net to client
@@ -140,12 +274,66 @@ Statistics
 
 Statistics
 ----------------------------------------------------------
-	  2  recursive calls
+	  0  recursive calls
 	 12  db block gets
-	  2  consistent gets
+	  0  consistent gets
 	  0  physical reads
 	  0  redo size
 	869  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  0  recursive calls
+	 12  db block gets
+	  0  consistent gets
+	  0  physical reads
+	  0  redo size
+	869  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  0  recursive calls
+	 12  db block gets
+	  0  consistent gets
+	  0  physical reads
+	  0  redo size
+	870  bytes sent via SQL*Net to client
+       1176  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row created.
+
+
+Statistics
+----------------------------------------------------------
+	  0  recursive calls
+	 12  db block gets
+	  0  consistent gets
+	  0  physical reads
+	  0  redo size
+	870  bytes sent via SQL*Net to client
        1175  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  1  sorts (memory)
@@ -158,12 +346,12 @@ Statistics
 
 Statistics
 ----------------------------------------------------------
-	  2  recursive calls
+	  0  recursive calls
 	 12  db block gets
-	  2  consistent gets
+	  0  consistent gets
 	  0  physical reads
 	  0  redo size
-	869  bytes sent via SQL*Net to client
+	870  bytes sent via SQL*Net to client
        1175  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  1  sorts (memory)
@@ -176,12 +364,12 @@ Statistics
 
 Statistics
 ----------------------------------------------------------
-	  2  recursive calls
+	  0  recursive calls
 	 12  db block gets
-	  2  consistent gets
+	  0  consistent gets
 	  0  physical reads
 	  0  redo size
-	868  bytes sent via SQL*Net to client
+	870  bytes sent via SQL*Net to client
        1176  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  1  sorts (memory)

@@ -26,7 +26,7 @@ Statistics
 
 Trigger created.
 
-insert into SALES_RECEIPT values (49895, sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,1540)
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id)
             *
 ERROR at line 1:
 ORA-01403: no data found

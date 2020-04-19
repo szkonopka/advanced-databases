@@ -4,6 +4,29 @@ System altered.
 
 System altered.
 
+
+0 rows updated.
+
+
+Statistics
+----------------------------------------------------------
+	279  recursive calls
+	 18  db block gets
+	990  consistent gets
+	  0  physical reads
+       3076  redo size
+	864  bytes sent via SQL*Net to client
+       1396  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	 22  sorts (memory)
+	  0  sorts (disk)
+	  0  rows processed
+
+timing for: trigger_5_prep
+Elapsed: 00:00:00.02
+
+Rollback complete.
+
 '5th rule - percent_promo scheduler job'
 
 PL/SQL procedure successfully completed.
@@ -12,4 +35,4 @@ PL/SQL procedure successfully completed.
 PL/SQL procedure successfully completed.
 
 timing for: trigger_5
-Elapsed: 00:00:00.04
+Elapsed: 00:00:00.03

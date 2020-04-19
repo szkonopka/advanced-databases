@@ -17,5 +17,9 @@ BEGIN
     UPDATE staff s
     SET s.sales_outlet_id = NULL
     WHERE s.sales_outlet_id = :old.id;
+
+    UPDATE customer c
+    SET c.home_sales_outlet_id = NULL
+    WHERE c.home_sales_outlet_id = :old.id;
 END;
 /

@@ -10,7 +10,10 @@ update PASTRY_INVENTORY pi
 @triggers/trigger_4.sql
 
 timing start trigger_4
-insert into SALES_RECEIPT values (49895, sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,1540);
+
+insert into SALES_RECEIPT (transaction_datetime, in_store, "order", line_item_id, quantity, line_item_amount, unit_price, promo, sales_outlet_id, staff_id, customer_id, product_id) 
+values (sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,1540);
+
 timing stop   
 rollback
 /

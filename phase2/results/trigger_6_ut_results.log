@@ -4,9 +4,122 @@ System altered.
 
 System altered.
 
+
+1 row deleted.
+
+
+Statistics
+----------------------------------------------------------
+	221  recursive calls
+	 17  db block gets
+	388  consistent gets
+	  0  physical reads
+       2192  redo size
+	864  bytes sent via SQL*Net to client
+       1002  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	 18  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+1 row deleted.
+
+
+Statistics
+----------------------------------------------------------
+	148  recursive calls
+	 10  db block gets
+	326  consistent gets
+	  0  physical reads
+       1100  redo size
+	863  bytes sent via SQL*Net to client
+	997  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	 12  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+
+8 rows updated.
+
+
+Statistics
+----------------------------------------------------------
+	 89  recursive calls
+	  8  db block gets
+	621  consistent gets
+	  0  physical reads
+	  0  redo size
+	865  bytes sent via SQL*Net to client
+       1019  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  8  sorts (memory)
+	  0  sorts (disk)
+	  8  rows processed
+
+
+45 rows updated.
+
+
+Statistics
+----------------------------------------------------------
+	 57  recursive calls
+	 50  db block gets
+	171  consistent gets
+	  0  physical reads
+	960  redo size
+	865  bytes sent via SQL*Net to client
+       1008  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  8  sorts (memory)
+	  0  sorts (disk)
+	 45  rows processed
+
+
+3 rows updated.
+
+
+Statistics
+----------------------------------------------------------
+	 72  recursive calls
+	  9  db block gets
+	305  consistent gets
+	  0  physical reads
+       1120  redo size
+	867  bytes sent via SQL*Net to client
+       1021  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  8  sorts (memory)
+	  0  sorts (disk)
+	  3  rows processed
+
+timing for: trigger_6_prep
+Elapsed: 00:00:00.04
+
+Rollback complete.
+
 '6th rule - delete_sales_outlet trigger'
 
 Trigger created.
 
+
+1 row deleted.
+
+
+Statistics
+----------------------------------------------------------
+	149  recursive calls
+	 93  db block gets
+       1515  consistent gets
+	  0  physical reads
+      19580  redo size
+	869  bytes sent via SQL*Net to client
+	980  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	  6  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
 timing for: trigger_6
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.02

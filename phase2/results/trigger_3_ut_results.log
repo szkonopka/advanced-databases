@@ -10,9 +10,9 @@ System altered.
 
 Statistics
 ----------------------------------------------------------
-	386  recursive calls
+	377  recursive calls
 	 18  db block gets
-	634  consistent gets
+	615  consistent gets
 	  0  physical reads
 	612  redo size
 	864  bytes sent via SQL*Net to client
@@ -69,7 +69,7 @@ Statistics
 	  2  consistent gets
 	  0  physical reads
 	  0  redo size
-	866  bytes sent via SQL*Net to client
+	867  bytes sent via SQL*Net to client
        1205  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  1  sorts (memory)
@@ -384,7 +384,7 @@ Statistics
 	 76  consistent gets
 	  0  physical reads
 	  0  redo size
-	870  bytes sent via SQL*Net to client
+	869  bytes sent via SQL*Net to client
        1205  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  2  sorts (memory)
@@ -456,7 +456,7 @@ Statistics
 	 33  consistent gets
 	  0  physical reads
 	  0  redo size
-	869  bytes sent via SQL*Net to client
+	870  bytes sent via SQL*Net to client
        1205  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	  1  sorts (memory)
@@ -470,7 +470,7 @@ Statistics
 Statistics
 ----------------------------------------------------------
 	  3  recursive calls
-	 13  db block gets
+	 15  db block gets
 	 33  consistent gets
 	  0  physical reads
 	  0  redo size
@@ -554,4 +554,4 @@ Statistics
 	  1  rows processed
 
 timing for: trigger_3
-Elapsed: 00:00:00.06
+Elapsed: 00:00:00.07
