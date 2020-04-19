@@ -1,5 +1,7 @@
 -- ZESTAW SZYMON KONOPKA
 
+@measure_params.sql
+
 alter system flush buffer_cache;
 alter system flush shared_pool;
 set autotrace traceonly statistics
@@ -8,7 +10,6 @@ timing start zestaw_transakcji_sk
 
 prompt '1st QUERY'
 -- QUERY 1
-@test_params.sql
 select so.ID as salesOutletId, round(avg(sr.LINE_ITEM_AMOUNT),2) as avgLineItemAmount  from SALES_OUTLET so
     join SALES_RECEIPT sr on so.ID = sr.SALES_OUTLET_ID
     where so.ID = :firstSalesOutletId
@@ -21,7 +22,6 @@ select so.ID as salesOutletId, round(avg(sr.LINE_ITEM_AMOUNT),2) as avgLineItemA
 
 prompt '2nd QUERY'
 -- QUERY 2
-@test_params.sql
 select sr.* from SALES_RECEIPT sr
     join SALES_OUTLET so on sr.SALES_OUTLET_ID = so.ID
     join PRODUCT p on sr.PRODUCT_ID = p.ID
@@ -34,7 +34,6 @@ select sr.* from SALES_RECEIPT sr
 
 prompt '3rd QUERY'
 -- QUERY 3
-@test_params.sql
 select sr.* from SALES_RECEIPT sr
     join CUSTOMER cu on sr.CUSTOMER_ID = cu.ID
     join GENERATION g on cu.GENERATION_ID = g.ID
@@ -43,12 +42,11 @@ select sr.* from SALES_RECEIPT sr
 
 prompt '4th QUERY'
 -- QUERY 4
-@test_params.sql
-select st.TARGET_DATE, so.ID as salesOutletId, st.TOTALGOAL, COUNT(*) as sales, ROUND(COUNT(*) * 100 / st.TOTALGOAL,2) as percOfTotalGoal,
+select st.TARGET_DATE, so.ID as salesOutletId, st.TOTAL_GOAL, COUNT(*) as sales, ROUND(COUNT(*) * 100 / st.TOTAL_GOAL,2) as percOfTOTAL_GOAL,
        SUM(sr.LINE_ITEM_AMOUNT) as sumLineItemAmount from SALES_OUTLET_TARGET st
     join SALES_OUTLET so on st.SALES_OUTLET_ID = so.ID
     join SALES_RECEIPT sr on so.ID = sr.SALES_OUTLET_ID and trunc(sr.TRANSACTION_DATETIME) = st.TARGET_DATE
-    group by st.TARGET_DATE, st.TOTALGOAL, so.ID;
+    group by st.TARGET_DATE, st.TOTAL_GOAL, so.ID;
 
 
 prompt '5th QUERY'
@@ -114,16 +112,14 @@ begin
         2,
         3,
         50,
-        1,
         in_promo => 1);
 end;
 /
 
 prompt '2nd COMMAND'
 -- COMMAND 2
-@test_params.sql
 update SALES_OUTLET_TARGET st
-set st.TOTALGOAL       = 0.05 * nvl((
+set st.TOTAL_GOAL       = 0.05 * nvl((
                                            select sum(QUANTITY * UNIT_PRICE)
                                            from SALES_RECEIPT sr
                                                     join SALES_OUTLET so on sr.SALES_OUTLET_ID = so.ID
@@ -131,12 +127,11 @@ set st.TOTALGOAL       = 0.05 * nvl((
                                                     join PRODUCT pp on sr.PRODUCT_ID = pp.ID
                                                     join PRODUCT_GROUP pg on pp.PRODUCT_GROUP_ID = pg.ID
                                            where so.ID = 3
-                                       ), st.TOTALGOAL)
+                                       ), st.TOTAL_GOAL)
 where st.SALES_OUTLET_ID = 3;
 
 prompt '3rd COMMAND'
 -- COMMAND 3
-@test_params.sql
 update PRODUCT pp
 set pp.CURRENT_WHOLESALE_PRICE = (100 - :perc_discount) / 100 * pp.CURRENT_WHOLESALE_PRICE,
     pp.CURRENT_RETAIL_PRICE    = (100 - :perc_discount) / 100 * pp.CURRENT_RETAIL_PRICE
@@ -155,6 +150,6 @@ where pp.id in (
         having max(srr.TRANSACTION_DATETIME) < add_months(max(sr.TRANSACTION_DATETIME), -12)
     )
 );
-timing stop
 
+timing stop
 exit rollback

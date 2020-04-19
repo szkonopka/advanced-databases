@@ -1,7 +1,7 @@
 alter system flush buffer_cache;
 alter system flush shared_pool;
 set autotrace traceonly statistics
-timing start regula_3
+timing start trigger_3_prep
 
 insert into SALES_RECEIPT values (49895, sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,1540);
 insert into SALES_RECEIPT values (49896, sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,2806);
@@ -48,20 +48,10 @@ update PASTRY_INVENTORY pi
 timing stop   
 rollback
 /
-create or replace trigger sprzedane_produkty
-   after insert
-   on sales_receipt
-   for each row
-begin
-   update pastry_inventory pi
-   set pi.quantity_sold    = pi.quantity_sold + :new.quantity,
-       pi.waste            = pi.waste - :new.quantity,
-       pi.waste_percentage = trunc(pi.quantity_sold * 100 / pi.start_of_day)
-   where trunc(:new.transaction_datetime) = pi.transaction_date and :new.product_id = pi.product_id;
-end;
-/
 
-timing start regula_3_trigger
+@triggers/trigger_3.sql
+
+timing start trigger_3
 insert into SALES_RECEIPT values (49895, sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,1540);
 insert into SALES_RECEIPT values (49896, sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,2806);
 insert into SALES_RECEIPT values (49897, sysdate, 0, 1, 1, 1, 2, 2, 0, 1, 1, 1,4938);

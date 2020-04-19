@@ -44,6 +44,4 @@ ALTER TABLE sales_outlet ADD CONSTRAINT fk_sales_outlet_manager_staff_id FOREIGN
 ALTER TABLE customer ADD CONSTRAINT fk_customer_home_sales_outlet_id FOREIGN KEY (home_sales_outlet_id) REFERENCES sales_outlet (id);
 ALTER TABLE sales_receipt ADD CONSTRAINT fk_sales_receipt_product_id FOREIGN KEY (product_id) REFERENCES product (id);
 
-drop trigger sprzedane_produkty;
-
 exit

@@ -1,0 +1,34 @@
+
+System altered.
+
+
+System altered.
+
+'5th rule - 5_percent_promo scheduler job'
+    );
+    *
+ERROR at line 10:
+ORA-06550: line 10, column 5:
+PLS-00103: Encountered the symbol ")" when expecting one of the following:
+( begin case declare end exception exit for goto if loop mod
+null pragma raise return select update while with
+<an identifier> <a double-quoted delimited-identifier>
+<a bind variable> << continue close current delete fetch lock
+insert open rollback savepoint set sql execute commit forall
+merge pipe purge json_exists json_value json_query
+json_object json_array
+The symbol "exit was inserted before ")" to continu
+
+
+begin
+*
+ERROR at line 1:
+ORA-20001: comma-separated list invalid near o
+ORA-06512: at "SYS.DBMS_UTILITY", line 236
+ORA-06512: at "SYS.DBMS_UTILITY", line 272
+ORA-06512: at "SYS.DBMS_SCHEDULER", line 564
+ORA-06512: at line 2
+
+
+timing for: trigger_5
+Elapsed: 00:00:00.07
