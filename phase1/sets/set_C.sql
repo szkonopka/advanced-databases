@@ -14,18 +14,18 @@ SELECT best.GENERATIONNAME, best.ID Best, worst.ID worst
 FROM (
          SELECT GENERATIONNAME, SS.ID
          FROM CUSTOMER CC
-                  JOIN SALESRECIEPTS SR on CC.ID = SR.CUSTOMER
-                  JOIN STAFF SS on SR.STAFF = SS.ID
+                  JOIN SALES_RECEIPT SR on CC.ID = SR.CUSTOMER_ID
+                  JOIN STAFF SS on SR.STAFF_ID = SS.ID
                   JOIN GENERATION GG ON CC.BIRTHYEAR = GG.BIRTHYEAR
          where ss.ID = (
              select inner_ss.id
              FROM CUSTOMER inner_cc
-                      JOIN SALESRECIEPTS inner_sr on inner_cc.ID = inner_sr.CUSTOMER
-                      JOIN STAFF inner_ss on inner_sr.STAFF = inner_ss.ID
+                      JOIN SALES_RECEIPT inner_sr on inner_cc.ID = inner_SR.CUSTOMER_ID
+                      JOIN STAFF inner_ss on inner_SR.STAFF_ID = inner_ss.ID
                       JOIN GENERATION inner_gg ON inner_cc.BIRTHYEAR = inner_gg.BIRTHYEAR
              where inner_gg.GENERATIONNAME = gg.GENERATIONNAME
              group by GENERATIONNAME, inner_ss.id
-             order by sum(inner_sr.UNITPRICE * inner_sr.QUANTITY) desc
+             order by sum(inner_sr.UNIT_PRICE * inner_sr.QUANTITY) desc
              fetch first row only
          )
          group by GENERATIONNAME, SS.ID
@@ -33,18 +33,18 @@ FROM (
          FULL JOIN (
     SELECT GENERATIONNAME, SS.ID
     FROM CUSTOMER CC
-             JOIN SALESRECIEPTS SR on CC.ID = SR.CUSTOMER
-             JOIN STAFF SS on SR.STAFF = SS.ID
+             JOIN SALES_RECEIPT SR on CC.ID = SR.CUSTOMER_ID
+             JOIN STAFF SS on SR.STAFF_ID = SS.ID
              JOIN GENERATION GG ON CC.BIRTHYEAR = GG.BIRTHYEAR
     where ss.ID = (
         select inner_ss.id
         FROM CUSTOMER inner_cc
-                 JOIN SALESRECIEPTS inner_sr on inner_cc.ID = inner_sr.CUSTOMER
-                 JOIN STAFF inner_ss on inner_sr.STAFF = inner_ss.ID
+                 JOIN SALES_RECEIPT inner_sr on inner_cc.ID = inner_SR.CUSTOMER_ID
+                 JOIN STAFF inner_ss on inner_SR.STAFF_ID = inner_ss.ID
                  JOIN GENERATION inner_gg ON inner_cc.BIRTHYEAR = inner_gg.BIRTHYEAR
         where inner_gg.GENERATIONNAME = gg.GENERATIONNAME
         group by GENERATIONNAME, inner_ss.id
-        order by sum(inner_sr.UNITPRICE * inner_sr.QUANTITY)
+        order by sum(inner_sr.UNIT_PRICE * inner_sr.QUANTITY)
         fetch first row only
     )
     group by GENERATIONNAME, SS.ID
@@ -56,29 +56,29 @@ SELECT nvl(with_promo.Category, without_promo.Category),
        with_promo.SalesSum    With_Promo,
        without_promo.SalesSum Without_Promo
 FROM (
-         SELECT PC.CATEGORY Category, SUM(SR.UNITPRICE * SR.QUANTITY) SalesSum
-         FROM SALESRECIEPTS SR
-                  JOIN PRODUCT PP on SR.PRODUCT = PP.ID
-                  JOIN PRODUCTCATEGORY PC on PP.PRODUCTCATEGORY = PC.ID
+         SELECT PC.NAME Category, SUM(SR.UNIT_PRICE * SR.QUANTITY) SalesSum
+         FROM SALES_RECEIPT SR
+                  JOIN PRODUCT PP on SR.PRODUCT_ID = PP.ID
+                  JOIN PRODUCT_CATEGORY PC on PP.PRODUCT_CATEGORY_ID = PC.ID
          WHERE SR.PROMO = 1
-         GROUP BY PC.CATEGORY
+         GROUP BY PC.NAME
      ) with_promo
          FULL JOIN
      (
-         SELECT PC.CATEGORY Category, SUM(SR.UNITPRICE * SR.QUANTITY) SalesSum
-         FROM SALESRECIEPTS SR
-                  JOIN PRODUCT PP on SR.PRODUCT = PP.ID
-                  JOIN PRODUCTCATEGORY PC on PP.PRODUCTCATEGORY = PC.ID
+         SELECT PC.NAME Category, SUM(SR.UNIT_PRICE * SR.QUANTITY) SalesSum
+         FROM SALES_RECEIPT SR
+                  JOIN PRODUCT PP on SR.PRODUCT_ID = PP.ID
+                  JOIN PRODUCT_CATEGORY PC on PP.PRODUCT_CATEGORY_ID = PC.ID
          WHERE SR.PROMO = 0
-         GROUP BY PC.CATEGORY
+         GROUP BY PC.NAME
      ) without_promo on with_promo.Category = without_promo.Category;
 
 prompt '3rd QUERY'
 -- QUERY 3
 SELECT SR.*
 FROM STAFF SS
-         JOIN SALESRECIEPTS SR on SS.ID = SR.STAFF
-WHERE ss.LASTNAME = 'Octavia';
+         JOIN SALES_RECEIPT SR on SS.ID = SR.STAFF_ID
+WHERE ss.LAST_NAME = 'Octavia';
 
 prompt '4th QUERY'
 -- QUERY 4
@@ -93,9 +93,9 @@ SELECT(
               else '5+'
               end
           ),
-      SUM(SR.UNITPRICE * SR.QUANTITY) sales_sum
-FROM SALESRECIEPTS SR
-         JOIN STAFF SS on SR.STAFF = SS.ID
+      SUM(SR.UNIT_PRICE * SR.QUANTITY) sales_sum
+FROM SALES_RECEIPT SR
+         JOIN STAFF SS on SR.STAFF_ID = SS.ID
 GROUP BY (
              case
                  when
@@ -122,18 +122,18 @@ ORDER BY (
 prompt '5th QUERY'
 -- QUERY 5
 SELECT CASE
-           WHEN SR.SALESOUTLET = CC.HOMESTORE THEN 1
-           WHEN SR.SALESOUTLET != CC.HOMESTORE THEN 0
+           WHEN SR.SALES_OUTLET_ID = CC.HOME_SALES_OUTLET_ID THEN 1
+           WHEN SR.SALES_OUTLET_ID != CC.HOME_SALES_OUTLET_ID THEN 0
            END                                                                                          home_outlet,
-       sum(sr.QUANTITY * sr.UNITPRICE)                                                                  group_cnt,
-       sum(sum(sr.QUANTITY * sr.UNITPRICE)) over ()                                                     total_cnt,
-       round(100 * (sum(sr.QUANTITY * sr.UNITPRICE) / sum(sum(sr.QUANTITY * sr.UNITPRICE)) over ()), 2) perc
-FROM SALESRECIEPTS SR
-         JOIN CUSTOMER CC on SR.CUSTOMER = CC.ID
+       sum(sr.QUANTITY * sr.UNIT_PRICE)                                                                  group_cnt,
+       sum(sum(sr.QUANTITY * sr.UNIT_PRICE)) over ()                                                     total_cnt,
+       round(100 * (sum(sr.QUANTITY * sr.UNIT_PRICE) / sum(sum(sr.QUANTITY * sr.UNIT_PRICE)) over ()), 2) perc
+FROM SALES_RECEIPT SR
+         JOIN CUSTOMER CC on SR.CUSTOMER_ID = CC.ID
 GROUP BY (
              CASE
-                 WHEN SR.SALESOUTLET = CC.HOMESTORE THEN 1
-                 WHEN SR.SALESOUTLET != CC.HOMESTORE THEN 0
+                 WHEN SR.SALES_OUTLET_ID = CC.HOME_SALES_OUTLET_ID THEN 1
+                 WHEN SR.SALES_OUTLET_ID != CC.HOME_SALES_OUTLET_ID THEN 0
                  END
              );
 
@@ -147,8 +147,8 @@ BEGIN
     SET NEWPRODUCT = 0
     WHERE EXISTS(
                   SELECT 1
-                  FROM SALESRECIEPTS SR
-                           JOIN PRODUCT PP on SR.PRODUCT = PP.ID
+                  FROM SALES_RECEIPT SR
+                           JOIN PRODUCT PP on SR.PRODUCT_ID = PP.ID
                   WHERE months_between(sysdate, SR.TRANSACTIONDATE) > months_threshold
               );
 
@@ -170,9 +170,9 @@ begin
         insert ("group")
         values (a.name);
 
-    merge into PRODUCTCATEGORY pc
+    merge into PRODUCT_CATEGORY pc
     using (select category_name name from dual) a
-    on (pc.CATEGORY = a.name)
+    on (PC.NAME = a.name)
     when not matched then
         insert (CATEGORY)
         values (a.name);
@@ -184,10 +184,10 @@ begin
         insert (TYPE)
         values (a.name);
 
-    insert into PRODUCT (name, PRODUCTGROUP, PRODUCTCATEGORY, PRODUCTTYPE)
+    insert into PRODUCT (name, PRODUCTGROUP, PRODUCT_CATEGORY, PRODUCTTYPE)
     values (name,
             (select id from PRODUCTGROUP where "group" = group_name),
-            (select id from PRODUCTCATEGORY where CATEGORY = category_name),
+            (select id from PRODUCT_CATEGORY where CATEGORY = category_name),
             (select id from PRODUCTTYPE where TYPE = type_name));
 end;
 
@@ -199,8 +199,8 @@ create or replace procedure Delete_Customer(
     is
 begin
     delete
-    from SALESRECIEPTS sr
-    where sr.CUSTOMER = customer_id;
+    from SALES_RECEIPT sr
+    where SR.CUSTOMER_ID = customer_id;
     commit;
 
     delete
