@@ -4,7 +4,8 @@ rm -rf ../data/new_dataset/SYS_TEMP_*
 chmod u+x ../clear-all-tables.sql
 chmod u+x ../reload-csv-data.sql
 
-sqlplus.exe -S coffeeshop/pass@localhost @../clear-all-tables.sql
+sqlplus.exe -S coffeeshop/pass@localhost @../delete-tables.sql
+sqlplus.exe -S coffeeshop/pass@localhost @../erd-ddl-create-tables.sql
 sqlplus.exe -S coffeeshop/pass@localhost @../reload-csv-data.sql
 
 exec_transaction_set() {

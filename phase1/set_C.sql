@@ -6,7 +6,7 @@ alter system flush buffer_cache;
 alter system flush shared_pool;
 set autotrace traceonly statistics
 alter session set NLS_TIMESTAMP_FORMAT = 'HH:MI:SS.FF6';
-timing start zestaw_transakcji_gs
+timing start zestaw_transakcji_js
 
 prompt '1st QUERY'
 -- QUERY 1
