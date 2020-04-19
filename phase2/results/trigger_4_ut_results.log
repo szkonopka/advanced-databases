@@ -16,7 +16,7 @@ Statistics
 	  0  physical reads
 	  0  redo size
 	864  bytes sent via SQL*Net to client
-       1096  bytes received via SQL*Net from client
+       1097  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
 	 12  sorts (memory)
 	  0  sorts (disk)
