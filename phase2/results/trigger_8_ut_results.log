@@ -4,9 +4,35 @@ System altered.
 
 System altered.
 
+
+1 row updated.
+
+
+Statistics
+----------------------------------------------------------
+	372  recursive calls
+	 42  db block gets
+       1516  consistent gets
+	  0  physical reads
+       7104  redo size
+	864  bytes sent via SQL*Net to client
+       1340  bytes received via SQL*Net from client
+	  3  SQL*Net roundtrips to/from client
+	 32  sorts (memory)
+	  0  sorts (disk)
+	  1  rows processed
+
+timing for: trigger_8_prep
+Elapsed: 00:00:00.09
+
+Rollback complete.
+
 '8th rule - employee_promotion scheduler job'
 
 PL/SQL procedure successfully completed.
 
+
+PL/SQL procedure successfully completed.
+
 timing for: trigger_8
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.09

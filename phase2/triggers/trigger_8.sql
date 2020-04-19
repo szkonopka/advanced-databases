@@ -5,14 +5,14 @@ BEGIN
             JOB_TYPE   => 'PLSQL_BLOCK',
             JOB_ACTION => '
                 UPDATE staff
-                SET position = (SELECT id FROM position WHERE name = ''Roaster'')
+                SET position_id = (SELECT id FROM position WHERE name = ''Roaster'')
                 WHERE id IN (
                     SELECT * FROM (
                         SELECT st.ID FROM staff st
-                        JOIN sales_receipt sr ON st.id = sr.staff
-                        WHERE MONTHS_BETWEEN(SYSDATE, SR.transaction_date) < 13
+                        JOIN sales_receipt sr ON st.id = sr.staff_id
+                        WHERE MONTHS_BETWEEN(SYSDATE, SR.transaction_datetime) < 13
                         GROUP BY st.id, st.first_name, st.last_name
-                        ORDER BY SUM(sr.quantity * sr.unitprice) DESC)
+                        ORDER BY SUM(sr.quantity * sr.unit_price) DESC)
                 WHERE ROWNUM = 1);',
             START_DATE      => SYSTIMESTAMP,
             REPEAT_INTERVAL => 'FREQ=MONTHLY; BYMONTHDAY=-1;',
