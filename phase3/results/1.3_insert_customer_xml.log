@@ -27078,4 +27078,4 @@ ORA-01756: quoted string not properly terminated
 1 row created.
 
 timing for: insert_timing
-Elapsed: 00:00:17.05
+Elapsed: 00:00:16.92

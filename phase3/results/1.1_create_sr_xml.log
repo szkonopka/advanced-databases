@@ -1,14 +1,8 @@
-DECLARE
-*
-ERROR at line 1:
-ORA-31085: schema "sales_receipt.xsd" already registered
-ORA-06512: at "XDB.DBMS_XMLSCHEMA_INT", line 72
-ORA-06512: at "XDB.DBMS_XMLSCHEMA", line 33
-ORA-06512: at line 39
 
+PL/SQL procedure successfully completed.
 
 timing for: create_timing
-Elapsed: 00:00:01.01
+Elapsed: 00:00:00.29
 
 SCHEMA_URL
 --------------------------------------------------------------------------------
@@ -78,7 +72,7 @@ QUAL_SCHEMA_URL
 --------------------------------------------------------------------------------
 HIER_TYPE   BIN SCHEMA_ID			 HID
 ----------- --- -------------------------------- ---
-XDv/Z4LgBsRn+58HtUHduhyg==
+XDJr/vgLL7QamBVCllzx9X1A==
 
 SCHEMA_URL
 --------------------------------------------------------------------------------
@@ -106,7 +100,7 @@ QUAL_SCHEMA_URL
 --------------------------------------------------------------------------------
 HIER_TYPE   BIN SCHEMA_ID			 HID
 ----------- --- -------------------------------- ---
-NONE	    NO	BFF6782E006C467FB9F07B541DDBA1CA NO
+NONE	    NO	26BFEF80B2FB41A981542965CF1F57D4 NO
 
 SCHEMA_URL
 --------------------------------------------------------------------------------

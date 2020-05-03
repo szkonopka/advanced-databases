@@ -1,0 +1,13 @@
+
+1 row created.
+
+
+PL/SQL procedure successfully completed.
+
+timing for: update_timing
+Elapsed: 00:00:00.27
+
+SO.SALES_TARGETS.EXTRACT('/SALES_TARGETS/SALES_TARGET/TOTAL_ID/TEXT()').GETSTRIN
+--------------------------------------------------------------------------------
+1602
+

@@ -184,7 +184,7 @@ namespace Parser
         {
             using var sw = new StreamWriter(path);
 
-            sw.WriteLine("TIMING START insert_timing");
+            sw.WriteLine("TIMING START insert_timing;");
             sw.WriteLine();
 
             foreach (var statement in statements)
@@ -194,8 +194,8 @@ namespace Parser
             }
 
             sw.WriteLine();
-            sw.WriteLine("TIMING STOP");
-            sw.WriteLine("EXIT ROLLBACK");
+            sw.WriteLine("TIMING STOP;");
+            sw.WriteLine("EXIT ROLLBACK;");
         }
     }
 }
