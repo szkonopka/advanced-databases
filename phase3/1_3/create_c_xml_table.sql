@@ -9,7 +9,7 @@ CREATE TABLE customer_xml (
 	gender varchar2(1) NOT NULL, 
 	home_sales_outlet_id number(10), 
 	generation_id number(10) NOT NULL, 
-	age_details XMLType,
+	age_details varchar2(500),
 	PRIMARY KEY (id)
 );
 

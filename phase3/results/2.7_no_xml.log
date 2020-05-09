@@ -1,0 +1,24 @@
+
+System altered.
+
+
+System altered.
+
+
+
+Statistics
+----------------------------------------------------------
+	515  recursive calls
+	  0  db block gets
+       1509  consistent gets
+	  0  physical reads
+	  0  redo size
+	764  bytes sent via SQL*Net to client
+	624  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	 62  sorts (memory)
+	  0  sorts (disk)
+	  4  rows processed
+
+timing for: no_xml_timing
+Elapsed: 00:00:00.06

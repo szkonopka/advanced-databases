@@ -1,11 +1,11 @@
 #!/bin/bash
 
 execute_sql() {
-    if [ $# == 1 ]
+    if [ $ == 1 ]
         then sqlplus.exe -S coffeeshop/pass@localhost @$1
     fi
 
-    if [ $# == 2 ]
+    if [ $ == 2 ]
         then sqlplus.exe -S coffeeshop/pass@localhost @$1 > $2
     fi
 }
@@ -68,7 +68,8 @@ echo "2.6 - performing tests"
 
 execute_sql 1_3/create_c_xml_table.sql 
 execute_sql 1_3/inserts.sql
-
+execute_sql 2_6/no_xml.sql > ./results/2.6_no_xml.log
+execute_sql 2_6/xml.sql > ./results/2.6_xml.log
 execute_sql 1_3/delete_c_xml_table.sql
 echo "2.6 - finished"
 
@@ -76,6 +77,7 @@ echo "2.7 - performing tests"
 
 execute_sql 1_3/create_c_xml_table.sql 
 execute_sql 1_3/inserts.sql
-
+execute_sql 2_7/no_xml.sql > ./results/2.7_no_xml.log
+execute_sql 2_7/xml.sql > ./results/2.7_xml.log
 execute_sql 1_3/delete_c_xml_table.sql
 echo "2.7 - finished"
