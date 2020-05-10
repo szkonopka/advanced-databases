@@ -76,11 +76,6 @@ INSERT INTO sales_receipt_xml VALUES(xmltype.createxml('<?xml version="1.0" enco
     <product_id>3945</product_id>
   </sales_receipt>'));
 
-
-
-SELECT EXTRACT(value(x), '/sales_receipt/customer_id') 
-FROM sales_receipt_xml x;
-
 BEGIN
 	DBMS_XMLSCHEMA.deleteSchema('sales_receipt.xsd');
 END;

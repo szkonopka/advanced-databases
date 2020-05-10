@@ -1,0 +1,73 @@
+
+	ID
+----------
+TRANSACTION_DATETIME
+---------------------------------------------------------------------------
+  IN_STORE	order LINE_ITEM_ID   QUANTITY LINE_ITEM_AMOUNT UNIT_PRICE
+---------- ---------- ------------ ---------- ---------------- ----------
+     PROMO SALES_OUTLET_ID   STAFF_ID CUSTOMER_ID PRODUCT_ID
+---------- --------------- ---------- ----------- ----------
+     29247
+17-APR-19 01.53.11.000000 PM
+	 1	    7		 1	    1		  22.5	     22.5
+	 0		 3	 2139	     4213	1234
+
+
+	ID
+----------
+TRANSACTION_DATETIME
+---------------------------------------------------------------------------
+  IN_STORE	order LINE_ITEM_ID   QUANTITY LINE_ITEM_AMOUNT UNIT_PRICE
+---------- ---------- ------------ ---------- ---------------- ----------
+     PROMO SALES_OUTLET_ID   STAFF_ID CUSTOMER_ID PRODUCT_ID
+---------- --------------- ---------- ----------- ----------
+     48713
+29-APR-19 05.25.48.000000 PM
+	 1	    1		 1	    2		   7.5	     3.75
+	 0		 3	 3316	     4748	3645
+
+
+	ID
+----------
+TRANSACTION_DATETIME
+---------------------------------------------------------------------------
+  IN_STORE	order LINE_ITEM_ID   QUANTITY LINE_ITEM_AMOUNT UNIT_PRICE
+---------- ---------- ------------ ---------- ---------------- ----------
+     PROMO SALES_OUTLET_ID   STAFF_ID CUSTOMER_ID PRODUCT_ID
+---------- --------------- ---------- ----------- ----------
+     47635
+28-APR-19 10.45.43.000000 AM
+	 1	    1		 1	    2		     5	      2.5
+	 0		 3	 4485	     2937	3024
+
+
+	ID
+----------
+TRANSACTION_DATETIME
+---------------------------------------------------------------------------
+  IN_STORE	order LINE_ITEM_ID   QUANTITY LINE_ITEM_AMOUNT UNIT_PRICE
+---------- ---------- ------------ ---------- ---------------- ----------
+     PROMO SALES_OUTLET_ID   STAFF_ID CUSTOMER_ID PRODUCT_ID
+---------- --------------- ---------- ----------- ----------
+     40429
+24-APR-19 08.19.41.000000 AM
+	 0	    1		 1	    1		     3		3
+	 0		 3	 3145	     3658	4299
+
+
+	ID
+----------
+TRANSACTION_DATETIME
+---------------------------------------------------------------------------
+  IN_STORE	order LINE_ITEM_ID   QUANTITY LINE_ITEM_AMOUNT UNIT_PRICE
+---------- ---------- ------------ ---------- ---------------- ----------
+     PROMO SALES_OUTLET_ID   STAFF_ID CUSTOMER_ID PRODUCT_ID
+---------- --------------- ---------- ----------- ----------
+     36256
+21-APR-19 12.30.16.000000 PM
+	 1	    1		 1	    1		     3		3
+	 0		 3	 4766	     3444	 870
+
+
+timing for: no_xml_timing
+Elapsed: 00:00:00.01

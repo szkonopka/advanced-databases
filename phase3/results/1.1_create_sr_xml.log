@@ -1,8 +1,20 @@
+DROP TABLE sales_receipt_xml
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
 
-PL/SQL procedure successfully completed.
+
+DECLARE
+*
+ERROR at line 1:
+ORA-31085: schema "sales_receipt.xsd" already registered
+ORA-06512: at "XDB.DBMS_XMLSCHEMA_INT", line 72
+ORA-06512: at "XDB.DBMS_XMLSCHEMA", line 33
+ORA-06512: at line 40
+
 
 timing for: create_timing
-Elapsed: 00:00:00.29
+Elapsed: 00:00:00.03
 
 SCHEMA_URL
 --------------------------------------------------------------------------------
@@ -72,7 +84,7 @@ QUAL_SCHEMA_URL
 --------------------------------------------------------------------------------
 HIER_TYPE   BIN SCHEMA_ID			 HID
 ----------- --- -------------------------------- ---
-XDJr/vgLL7QamBVCllzx9X1A==
+XDXrhDyFEBR8C0oyuR368ELA==
 
 SCHEMA_URL
 --------------------------------------------------------------------------------
@@ -100,7 +112,7 @@ QUAL_SCHEMA_URL
 --------------------------------------------------------------------------------
 HIER_TYPE   BIN SCHEMA_ID			 HID
 ----------- --- -------------------------------- ---
-NONE	    NO	26BFEF80B2FB41A981542965CF1F57D4 NO
+NONE	    NO	5EB843C8510147C0B4A32B91DFAF042C NO
 
 SCHEMA_URL
 --------------------------------------------------------------------------------
@@ -115,4 +127,7 @@ QUAL_SCHEMA_URL
 HIER_TYPE   BIN SCHEMA_ID			 HID
 ----------- --- -------------------------------- ---
 
+
+
+Table created.
 

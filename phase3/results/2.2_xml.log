@@ -1,0 +1,47 @@
+
+NVL(WITH_PROMO.CATEGORY,WITHOUT_PROMO.CATEGORY)
+--------------------------------------------------------------------------------
+WITH_PROMO WITHOUT_PROMO
+---------- -------------
+Drinking Chocolate
+     185.7	25990.75
+
+Coffee beans
+    134.55	26219.94
+
+Branded
+     186.5	25429.96
+
+
+NVL(WITH_PROMO.CATEGORY,WITHOUT_PROMO.CATEGORY)
+--------------------------------------------------------------------------------
+WITH_PROMO WITHOUT_PROMO
+---------- -------------
+Bakery
+    173.35	23477.78
+
+Coffee
+    208.25	26619.38
+
+Flavours
+     210.4	26503.93
+
+
+NVL(WITH_PROMO.CATEGORY,WITHOUT_PROMO.CATEGORY)
+--------------------------------------------------------------------------------
+WITH_PROMO WITHOUT_PROMO
+---------- -------------
+Packaged Chocolate
+    169.35	25354.82
+
+Loose Tea
+    226.55	28137.55
+
+Tea
+    142.85	24839.94
+
+
+9 rows selected.
+
+timing for: xml_timing
+Elapsed: 00:00:59.04

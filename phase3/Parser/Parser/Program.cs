@@ -47,7 +47,7 @@ namespace Parser
 
             var salesReceiptInsertStatements = salesReceipts.Select(ToInsertString).ToList();
 
-            SaveStatementsToFile(salesReceiptStatementsFilePath, salesReceiptInsertStatements);
+            SaveStatementsToFile(salesReceiptStatementsFilePath, salesReceiptInsertStatements, false);
         }
 
         private static List<SalesReceipt> GetSalesReceipts(string path)
@@ -219,7 +219,7 @@ namespace Parser
             return sww.ToString();
         }
 
-        private static void SaveStatementsToFile(string path, List<string> statements)
+        private static void SaveStatementsToFile(string path, List<string> statements, bool rollback = true)
         {
             using var sw = new StreamWriter(path);
 
@@ -234,7 +234,11 @@ namespace Parser
 
             sw.WriteLine();
             sw.WriteLine("TIMING STOP;");
-            sw.WriteLine("EXIT ROLLBACK;");
+
+            if (rollback)
+                sw.WriteLine("EXIT ROLLBACK;");
+            else
+                sw.WriteLine("EXIT;");
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Parser
         public string TransactionDateTime { get; set; }
         [Index(2)]
         [XmlElement(ElementName = "in_store")]
-        public bool InStore { get; set; }
+        public int InStore { get; set; }
         [Index(3)]
         [XmlElement(ElementName = "order")]
         public int Order { get; set; }
@@ -33,7 +33,7 @@ namespace Parser
         public float UnitPrice { get; set; }
         [Index(8)]
         [XmlElement(ElementName = "promo")]
-        public bool Promo { get; set; }
+        public int Promo { get; set; }
         [Index(9)]
         [XmlElement(ElementName = "sales_outlet_id")]
         public int SalesOutletId { get; set; }
