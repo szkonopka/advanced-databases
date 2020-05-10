@@ -3,4 +3,6 @@ BEGIN
 END;
 /
 
+DROP TABLE sales_receipt_xml;
+
 EXIT;

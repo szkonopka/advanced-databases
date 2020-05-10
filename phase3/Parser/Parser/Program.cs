@@ -39,7 +39,27 @@ namespace Parser
 
             var customerInsertStatements = customerJoined.Select(ToInsertString).ToList();
             SaveStatementsToFile(customerStatementsFilePath, customerInsertStatements);
+
+            var salesReceiptStatementsFilePath = @"../../1_1/inserts.sql";
+
+            var salesReceiptCsvPath = dataBasePath + "sales_receipt.csv";
+            var salesReceipts = GetSalesReceipts(salesReceiptCsvPath);
+
+            var salesReceiptInsertStatements = salesReceipts.Select(ToInsertString).ToList();
+
+            SaveStatementsToFile(salesReceiptStatementsFilePath, salesReceiptInsertStatements);
         }
+
+        private static List<SalesReceipt> GetSalesReceipts(string path)
+        {
+            using var reader = new StreamReader(path);
+            using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+            csv.Configuration.HasHeaderRecord = false;
+            csv.Configuration.Delimiter = ";";
+
+            var records = csv.GetRecords<SalesReceipt>();
+            return records.ToList();
+        }   
 
         private static List<Generation> GetGenerations(string path)
         {
@@ -113,6 +133,25 @@ namespace Parser
             }
 
             return outlets;
+        }
+
+        private static string ToInsertString(SalesReceipt salesReceipt)
+        {
+            return $@"INSERT INTO sales_receipt_xml VALUES(xmltype.createxml('<?xml version=""1.0"" encoding=""utf-16""?>
+                <sales_receipt xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema""> 
+                    <transaction_datetime>{salesReceipt.TransactionDateTime}</transaction_datetime>
+                    <in_store>{salesReceipt.InStore}</in_store>
+                    <order>{salesReceipt.Order}</order>
+                    <line_item_id>{salesReceipt.LineItemId}</line_item_id>
+                    <quantity>{salesReceipt.Quantity}</quantity>
+                    <line_item_amount>{salesReceipt.LineItemAmount}</line_item_amount>
+                    <unit_price>{salesReceipt.UnitPrice}</unit_price>
+                    <promo>{salesReceipt.Promo}</promo>
+                    <sales_outlet_id>{salesReceipt.SalesOutletId}</sales_outlet_id>
+                    <staff_id>{salesReceipt.StaffId}</staff_id>
+                    <customer_id>{salesReceipt.CustomerId}</customer_id>
+                    <product_id>{salesReceipt.ProductId}</product_id>
+                </sales_receipt>'));";
         }
 
         private static string ToInsertString(Customer customer)

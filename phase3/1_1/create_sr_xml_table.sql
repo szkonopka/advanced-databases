@@ -1,10 +1,13 @@
+DROP TABLE sales_receipt_xml;
+
 TIMING START create_timing;
 
 DECLARE
   extension_1_1 CLOB;
 BEGIN
   extension_1_1 := '<?xml version="1.0" encoding="UTF-8"?>
-    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
       <xs:element name="sales_receipt">
         <xs:complexType>
           <xs:sequence>
@@ -51,6 +54,10 @@ END;
 TIMING STOP;
  
 SELECT * FROM user_xml_schemas;
+
+CREATE TABLE sales_receipt_xml OF XMLTYPE
+XMLSCHEMA "sales_receipt.xsd"
+ELEMENT "sales_receipt";
 
 EXIT;
 /
