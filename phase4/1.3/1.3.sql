@@ -9,4 +9,10 @@ UPDATE (
      FROM customer c JOIN sales_outlet so ON so.id = c.home_sales_outlet_id
 ) SET c_localization = new_localization;
 
+UPDATE (
+    SELECT c.longitude as c_longitude, c.latitude as c_latitude, 
+    c.localization.sdo_point.x as new_longitude, c.localization.sdo_point.y as new_latitude from customer c
+) SET c_longitude = new_longitude,
+      c_latitude = new_latitude;
+
 EXIT;
