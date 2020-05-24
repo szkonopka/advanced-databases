@@ -10,17 +10,17 @@ System altered.
 
 Statistics
 ----------------------------------------------------------
-       7002  recursive calls
-	 31  db block gets
-      36041  consistent gets
+       7031  recursive calls
+	 13  db block gets
+      36111  consistent gets
 	  0  physical reads
-       6592  redo size
+       5528  redo size
 	864  bytes sent via SQL*Net to client
        1525  bytes received via SQL*Net from client
 	  3  SQL*Net roundtrips to/from client
-	275  sorts (memory)
+	279  sorts (memory)
 	  0  sorts (disk)
 	  1  rows processed
 
 timing for: 2.6
-Elapsed: 00:00:03.75
+Elapsed: 00:00:02.02

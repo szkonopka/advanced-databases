@@ -26,7 +26,7 @@ BEGIN
     SET delivery_range = SDO_UTIL.CIRCLE_POLYGON(longitude,latitude, new_range, 5)
     WHERE id = outlet_id;
 END;
-
+/
 TIMING STOP;
 
 EXIT;
