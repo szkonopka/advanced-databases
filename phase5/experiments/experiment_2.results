@@ -1,0 +1,78 @@
+
+System altered.
+
+
+System altered.
+
+
+18309 rows selected.
+
+
+Statistics
+----------------------------------------------------------
+	484  recursive calls
+	  0  db block gets
+       1304  consistent gets
+	  0  physical reads
+	  0  redo size
+     535183  bytes sent via SQL*Net to client
+      14044  bytes received via SQL*Net from client
+       1222  SQL*Net roundtrips to/from client
+	 56  sorts (memory)
+	  0  sorts (disk)
+      18309  rows processed
+
+
+
+Statistics
+----------------------------------------------------------
+	543  recursive calls
+	  0  db block gets
+       1335  consistent gets
+	  0  physical reads
+	  0  redo size
+	798  bytes sent via SQL*Net to client
+	624  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	 32  sorts (memory)
+	  0  sorts (disk)
+	  2  rows processed
+
+timing for: experiment_2
+Elapsed: 00:00:00.20
+
+18309 rows selected.
+
+
+Statistics
+----------------------------------------------------------
+	  8  recursive calls
+	  0  db block gets
+	531  consistent gets
+	  0  physical reads
+	  0  redo size
+     535183  bytes sent via SQL*Net to client
+      14044  bytes received via SQL*Net from client
+       1222  SQL*Net roundtrips to/from client
+	  1  sorts (memory)
+	  0  sorts (disk)
+      18309  rows processed
+
+
+
+Statistics
+----------------------------------------------------------
+	 70  recursive calls
+	  0  db block gets
+	950  consistent gets
+	  0  physical reads
+	  0  redo size
+	798  bytes sent via SQL*Net to client
+	624  bytes received via SQL*Net from client
+	  2  SQL*Net roundtrips to/from client
+	  7  sorts (memory)
+	  0  sorts (disk)
+	  2  rows processed
+
+timing for: experiment_2_inmemory
+Elapsed: 00:00:00.15
